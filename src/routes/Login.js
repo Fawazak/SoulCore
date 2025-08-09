@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { login, logout, getCurrentUser } from "../services/authServices"; // Add logout + getCurrentUser
-import { useNavigate } from 'react-router-dom';
 import { sendPasswordResetEmail } from "firebase/auth";
 import { auth } from "../firebase/firebase";
 import { updateEmail } from 'firebase/auth';
@@ -11,7 +10,6 @@ const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [user, setUser] = useState(null);
-  const navigate = useNavigate();
   const [resetMessage, setResetMessage] = useState('');
     
   // Change Password or Email Functions

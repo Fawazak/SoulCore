@@ -1,8 +1,5 @@
-import React, { useRef, useEffect, useState } from "react";
-import photo from '../assets/grow.png'
+import React, {  useEffect, useState } from "react";
 import Transitions from '../components/Transitions'
-import emailjs from '@emailjs/browser';
-import { IoIosArrowDown } from "react-icons/io";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { signup } from "../services/authServices";

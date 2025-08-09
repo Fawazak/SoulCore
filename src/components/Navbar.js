@@ -37,7 +37,7 @@ const Navbar = () =>{
             <div className="menu">
                 <Link  to = '/'  className ="item">Home</Link>
                 <Link to = '/about' className ="item">About</Link>
-                <Link className="logo2" to = '/' > <img src={logo2} ></img></Link>
+                <Link className="logo2" to = '/' > <img src={logo2} alt="Logo"></img></Link>
                 <Link activeClass = 'active' to = '/services' spy = {true} smooth={true} offset= {-100} duration = {800}className ="item">Pricing</Link>
                 {/* <Link activeClass = 'active' to = '/signup' spy = {true} smooth={true} offset= {-100} duration = {800}className ="item">Sign Up</Link> */}
                 

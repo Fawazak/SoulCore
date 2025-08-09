@@ -1,4 +1,4 @@
-import {React, useEffect} from 'react'
+import {React} from 'react'
 
 import Intro from '../components/Intro'
 import Services from '../components/Service'

@@ -1,5 +1,4 @@
 import { FaInstagram } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
 import logo2 from '../assets/logo.png' 
 import { MdOutlineEmail } from "react-icons/md";
 import Modal from './Modal';

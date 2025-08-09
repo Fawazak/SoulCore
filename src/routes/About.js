@@ -1,7 +1,5 @@
 import React from 'react'
 import photo from '../assets/samaAbout.jpeg'
-import photo2 from '../assets/sad.jpeg'
-
 import Transitions from "../components/Transitions";
 
 const About = () => {

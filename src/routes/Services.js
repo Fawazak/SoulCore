@@ -1,6 +1,5 @@
 import React, {useRef, useState, useEffect} from 'react'
 import photo from '../assets/sea.png'
-import { Link } from 'react-router-dom'
 import Transitions from '../components/Transitions'
 import faqs from '../assets/faqs.json'
 import { IoIosArrowDown } from "react-icons/io";

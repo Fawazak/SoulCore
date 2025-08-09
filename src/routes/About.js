@@ -9,16 +9,16 @@ const About = () => {
         
         {/* First Section: About Us */}
         <div className='px-20 py-20 justify-center'>
-          <h1 className='text-denim text-4xl md:text-6xl mb-20 md:justify-center flex font-final '>The Person Behind It All</h1>
+          <h1 className='text-denim text-4xl md:text-5xl mb-20 md:justify-center flex font-final '>The Person Behind It All</h1>
           <div className=' flex flex-col md:flex-row'>
             <div className='flex justify-center'>
               
-              <img src={photo} alt='sama'   className='rounded-[5rem] md:w-8/12 md:h-auto w-40 h-40 object-cover object-left' 
+              <img src={photo} alt='sama'   className='rounded-[5rem] md:w-10/12 md:h-auto w-40 h-40 object-cover object-left' 
               />
             </div>
-            <div className="flex flex-col items-center  md:px-20 lg:px-40 mt-10  mb-10 text-center md:text-left ">
+            <div className="flex flex-col items-center  md:px-10 lg:px-32 mt-10  mb-10 text-center md:text-left ">
               
-              <h1 className="text-3xl md:text-4xl font-final mb-2">Sama Al Khreisha</h1>
+              <h1 className="text-3xl md:text-3xl font-final mb-2">Sama Al Khreisha</h1>
 
               
               <h2 className="text-lg italic text-gray-600 mb-6">Pilates Trainer</h2>

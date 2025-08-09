@@ -186,7 +186,7 @@ const SignUp = () => {
       </Modal>
       <div className='font-final flex flex-col w-full bg-slate-300 min-h-screen md:pt-24'>
         <div className='flex flex-col md:flex-col justify-between text-center items-center'>
-          <div className='w-full md:w-1/2 px-6 md:px-10 pt-10'>
+          <div className='w-full md:w-1/2 px-6 md:px-6 pt-10'>
             <h1 className='text-slate-600 text-4xl md:text-6xl font-final'>Sign Up</h1>
             <p className='mt-6 md:mt-10'>
             <b>You're just a few clicks away from joining the SoulCore Community!</b> <br></br><br></br>
@@ -196,7 +196,7 @@ As a member, you'll gain unlimited access to our growing on-demand library, a va
             </p>
           </div>
           
-  <div className='relative w-full md:w-1/2 p-6 pt-0 md:p-10'>
+  <div className='relative w-full md:w-3/5 p-6 pt-0 md:p-10'>
           
       {feedback.message && (
         <div
@@ -292,7 +292,7 @@ As a member, you'll gain unlimited access to our growing on-demand library, a va
     Passwords do not match
   </p>
 )}
-      <button type="submit" className={`btn ${(!passwordMatch || !emailMatch || !acceptedWaiver) ? 'opacity-50 cursor-not-allowed' : ''}`}
+      <button type="submit" className={`btn  ${(!passwordMatch || !emailMatch || !acceptedWaiver) ? 'opacity-50 cursor-not-allowed' : ''}`}
         disabled={!passwordMatch || !emailMatch || !acceptedWaiver}>
               Sign Up
             </button>

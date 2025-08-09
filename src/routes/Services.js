@@ -23,9 +23,9 @@ const Services = () => {
   return (
     <Transitions>
       <div className="bg-gray-100">
-    <div className=" flex flex-col items-center min-h-screen  mb-20">
+    <div className=" flex flex-col items-center min-h-screen mb-20">
       <h1 className="text-4xl md:text-7xl font-final mb-20 py-20 px-10  md:pt-52 bg-cover bg-center w-full text-center relative z-5 text-neutral-200" style={{ backgroundImage: `url(${photo})` }}>Pricing</h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 w-full max-w-[95rem] ">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 w-full max-w-[90rem] ">
 
       {/* Basic Plan */}
       <div className="bg-white rounded-xl shadow-lg p-8 text-center flex flex-col hover:scale-110 transition-transform duration-300">

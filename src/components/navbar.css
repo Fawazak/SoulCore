@@ -54,7 +54,7 @@
     transition: color 0.3s ease, transform 0.3s ease;
 }
 .item {
-    font-size: 25px;
+    font-size: 23px;
     font-weight: 100;
     font-family: "Playfair Display";
     transition: 0.4s;
@@ -63,7 +63,7 @@
 }
 .user-icon-container {
     position: absolute;
-    right: 5rem; /* Adjust distance from right edge */
+    right: 1.5rem; /* Adjust distance from right edge */
     top: 50%;
     padding: 20px;
     transform: translateY(-50%);

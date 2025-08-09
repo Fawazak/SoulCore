@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "intl-tel-input/build/css/intlTelInput.css";
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif, 'SUSE';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.btn {
+  display: flex;
+  width: auto;
+  height: 65px;
+  min-width: 160px;
+  max-width: 250px;
+  font-family: 'Sans-erif',
+    sans-serif;
+  font-size: 16px;
+  background-color: rgb(111, 143, 175);
+  border-radius: 2.2rem;
+  margin: 2rem auto;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transition: 0.5s;
+  z-index: 1;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: rgb(64, 86, 108);
+}
+
+@media (max-width: 640px) {
+  .btn {
+    width: 80%;      /* Make the button take up more horizontal space */
+    height: 50px;    /* Adjust the height to fit smaller screens */
+    font-size: 0.875rem; /* Slightly reduce the font size */
+    margin: 1rem auto; /* Reduce margin and center the button */
+    border-radius: 1.5rem; /* Adjust the border-radius for a smaller button */
+  }
+}
+
+

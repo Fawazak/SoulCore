@@ -50,8 +50,6 @@ const Navbar = () =>{
             
         )}
                 
-                
-                
                 <Link to='/login' className="user-icon-container">
                     <PiUserLight className="user-icon" size={35} />
                 </Link>
@@ -60,15 +58,16 @@ const Navbar = () =>{
 
 
             <CiMenuBurger size={50} className='mobMenu absolute top-4 right-4 z-20' onClick={() => setShowMenu(!showMenu)}/>
-
-            <div className={`flex flex-col p-2 gap-2 text-white bg-denim w-1/3 rounded-xl  mt-16 z-10 font-yay mr-4
+            <div className={`flex flex-col p-2 gap-2 text-white bg-denim w-1/3 rounded-xl  mt-16 z-10 font-final mr-4
                 transition-opacity duration-500 ${showMenu ? 'block opacity-100' : 'hidden opacity-0'} `}
-    style={{ position: 'absolute', top: '0px', right: '0px' }}
-  >                <Link activeClass = 'active' to = '/' spy = {true} smooth={true} offset= {-100} duration = {800} className =" " onClick={() => setShowMenu(false)}>Home</Link>
+                style={{ position: 'absolute', top: '0px', right: '0px' }}
+            >                
+                <Link activeClass = 'active' to = '/' spy = {true} smooth={true} offset= {-100} duration = {800} className =" " onClick={() => setShowMenu(false)}>Home</Link>
                 <Link activeClass = 'active' to = 'about' spy = {true} smooth={true} offset= {-200} duration = {800}className =" " onClick={() => setShowMenu(false)}>About</Link>
                 <Link activeClass = 'active' to = '/services' spy = {true} smooth={true} offset= {-100} duration = {800}className =" " onClick={() => setShowMenu(false)}>Pricing</Link>
-                {/* <Link activeClass = 'active' to = '/faqs' spy = {true} smooth={true} offset= {-250} duration = {800}className =" " onClick={() => setShowMenu(false)}>FAQs</Link> */}
                 <Link activeClass = 'active' to = '/signup' spy = {true} smooth={true} offset= {-100} duration = {800}className =" " onClick={() => setShowMenu(false)}>Sign Up</Link>
+                <Link activeClass = 'active' to = '/login' spy = {true} smooth={true} offset= {-100} duration = {800}className =" " onClick={() => setShowMenu(false)}>Login</Link>
+
             </div>
         </div>
     )

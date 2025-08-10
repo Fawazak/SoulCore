@@ -21,7 +21,7 @@ const Intro = () => {
       </h1>
   
       <div className="flex justify-center w-full">
-        <a href="/about" className="btn ">
+        <a href="/services" className="btn ">
           Learn More
         </a>
       </div>

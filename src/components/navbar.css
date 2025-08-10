@@ -16,7 +16,7 @@
     background-color: rgba(244, 244, 244, 0);
     backdrop-filter: none;
     padding-top: 1rem;    /* or more */
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
   }
   
   /* On hover and scrolled states stay same */
@@ -40,28 +40,27 @@
   .menu {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly; /* space items across full width */
     flex-wrap: wrap;
     align-items: center;
-    gap: 5rem;  
+    gap: 2rem;  
     width: 100%;
-    max-width: 1000px; /* max width container */
-    padding: 0 1rem;
+    max-width: none; /* remove width limit */
     box-sizing: border-box;
   }
   
   .item {
-    font-size: 1.4rem; /* use rem for scaling */
+    font-size: 1.4rem;
     font-weight: 400;
     font-family: "Playfair Display", serif;
     transition: 0.4s;
     cursor: pointer;
     padding: 0.5rem 1rem;
-    width: 100px; /* let width adjust */
-    /* min-width: 100px; */
-    white-space: nowrap; /* prevent wrapping */
+    width: auto; /* let text decide size */
+    white-space: nowrap;
     text-align: center;
   }
+  
   
   .item:hover {
     color: rgb(223, 239, 255);
@@ -71,7 +70,7 @@
   
   .user-icon-container {
     position: absolute;
-    right: 1rem; /* slight reduction */
+    right: 2rem; /* slight reduction */
     top: 50%;
     padding: 12px; /* reduced padding */
     transform: translateY(-50%);

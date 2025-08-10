@@ -21,7 +21,7 @@ const About = () => {
               <h1 className="text-3xl md:text-3xl font-final mb-2">Sama Al Khreisha</h1>
 
               
-              <h2 className="text-lg italic text-gray-600 mb-6">Pilates Trainer</h2>
+              <h2 className="text-lg italic text-gray-600 mb-6">SoulCore Founder & Pilates Instructor</h2>
 
               {/* Paragraph */}
               <p className="text-lg leading-relaxed md:text-center max-w-4xl text-gray-700 ">
@@ -31,8 +31,7 @@ const About = () => {
               <br /><br />
               I created <b>SoulCore</b> to help men and women reconnect with their bodies, gently, intentionally, and with strength. Whether you’re on your living room floor or halfway across the world, my goal is to guide you to feel stronger in your body and calmer in your mind.
               <br /><br />
-              Because movement shouldn’t be overwhelming. It should feel empowering.
-              And every time you show up on the mat, you’re investing in the most important person,<b> your future self.</b>  </p>
+              Movement shouldn’t be overwhelming. It should feel empowering. Every time you show up on the mat, you’re investing in the most important person,<b> your future self.</b>  </p>
 
             </div>
           </div>

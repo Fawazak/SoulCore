@@ -5,7 +5,7 @@ import 'aos/dist/aos.css';
 import { signup } from "../services/authServices";
 import PhoneInput from 'react-phone-input-2';
 import { toast } from 'sonner';
-import { FirebaseError } from "firebase/app";
+import { useLocation } from "react-router-dom";
 
 const SignUp = ({ openModal }) => {
   const [email, setEmail] = useState("");
@@ -20,7 +20,14 @@ const SignUp = ({ openModal }) => {
   const [passwordMatch, setPasswordMatch] = useState(true);
   const [emailMatch, setEmailMatch] = useState(true);
   const [acceptedWaiver, setAcceptedWaiver] = useState(false);
-  
+  const location = useLocation();
+  const [selectedPackage, setSelectedPackage] = useState("");
+
+  useEffect(() => {
+    if (location.state?.selectedPackage) {
+      setSelectedPackage(location.state.selectedPackage);
+    }
+  }, [location.state]);
 
   const validateEmail = (email) => {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -198,17 +205,28 @@ As a member, you'll gain unlimited access to our growing on-demand library, a va
         minLength={8}
         onChange={(e) => setConfirmPassword(e.target.value)}
       />
-{confirmEmail && !emailMatch && (
-  <p className="text-sm text-red-600 mt-1">
-    Emails do not match
-  </p>
-)}
+      <select
+        required
+        value={selectedPackage}
+        onChange={(e) => setSelectedPackage(e.target.value)}
+        className="bg-gray-200 rounded-xl p-2"
+      >
+        <option value="" className="">Select a Package</option>
+        <option value="Basic Plan">On-Demand Library Only - AED 65/mo</option>
+        <option value="Monthly">Monthly Membership - AED 180/mo</option>
+        <option value="Private">Private Session - AED 280/session</option>
+      </select>
+    {confirmEmail && !emailMatch && (
+      <p className="text-sm text-red-600 mt-1">
+        Emails do not match
+      </p>
+    )}
 
-{confirmPassword && !passwordMatch && (
-  <p className="text-sm text-red-600 mt-1">
-    Passwords do not match
-  </p>
-)}
+    {confirmPassword && !passwordMatch && (
+      <p className="text-sm text-red-600 mt-1">
+        Passwords do not match
+      </p>
+    )}
       <button type="submit" className={`btn  ${(!passwordMatch || !emailMatch || !acceptedWaiver) ? 'opacity-50 cursor-not-allowed' : ''}`}
         disabled={!passwordMatch || !emailMatch || !acceptedWaiver}>
               Sign Up
@@ -239,7 +257,7 @@ As a member, you'll gain unlimited access to our growing on-demand library, a va
                 Terms and Conditions
               </span>
             </div>
-      </form>
+          </form>
               </div>
             </div>
 

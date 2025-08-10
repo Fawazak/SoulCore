@@ -5,39 +5,31 @@
     },
     {
       "question": "What types of classes do you offer?",
-      "answer": "We offer live online Mat Pilates classes, a growing on-demand video library, and private 1:1 or group sessions tailored to your goals. All classes focus on mindful movement, strength, and connection."
+      "answer": "We offer live online Mat Pilates classes, a growing library of on-demand videos, and private 1:1 or group sessions tailored to your goals."
     },
     {
       "question": "Do I need any equipment for the classes?",
-      "answer": "For most classes, all you need is a mat! Occasionally we may use small props like a Pilates ball, resistance band, or hand weights—but modifications are always provided."
+      "answer": "Just a mat for most classes! Occasionally we may use small props like a Pilates ball, resistance band, or hand weights, but modifications are always provided."
     },
     {
       "question": "I'm a beginner. Can I join?",
-      "answer": "Absolutely! Our classes are beginner-friendly with options to modify or challenge yourself based on your level and how you're feeling that day."
+      "answer": "Absolutely! Our classes are designed for all levels, with options to modify or challenge yourself."
+
     },
     {
-      "question": "How do I book a private session or group event?",
-      "answer": "You can reach out through the Get in Touch page or email us directly to schedule a private or group class tailored to your needs."
-    },
-    {
-      "question": "What if I can’t make the live class?",
-      "answer": "No worries—replays are available through our on-demand library so you can practice anytime, anywhere."
-    },
-    {
-      "question": "Is it safe to do Pilates at home?",
-      "answer": "Yes, Pilates is generally safe to practice at home. Just make sure you have a clear space and listen to your body. If you have any medical conditions or injuries, please consult a physician before starting."
-    },
-    {
-      "question": "How do I join the community?",
-      "answer": "Once you sign up, you’ll get access to our online community for encouragement, accountability, and support. Think of it as your virtual studio space!"
+      "question": "How do I book a private group session/event",
+      "answer": "Reach out via email to schedule a session tailored to you."
     },
     {
       "question": "I’ve signed up—what’s next?",
-      "answer": "Welcome! You’ll receive a confirmation email with all the details, including class links (for live sessions) or login access (for the on-demand library). Be sure to check your spam folder, and feel free to reach out if you don’t receive it within a few minutes."
-    },
+      "answer": "You’ll receive a confirmation email with your login info or live class links. Be sure to check your spam folder, and contact us if you don’t get it."
+    },{
+        "question": "How long until my membership activates after payment?",
+        "answer": "We usually activate access within 24 hours of confirming your payment. It may take up to 48 hours during weekends or holidays."
+      },
     {
-      "question": "What’s your cancellation policy?",
-      "answer": "For live sessions, we kindly ask for at least 12 hours’ notice if you need to cancel or reschedule. Late cancellations may be charged in full. For private bookings or group events, a 24–48 hour notice is required depending on the package."
+      "question": "What should I write in the bank transfer reference?",
+      "answer": "Please include your full name or email address so we can quickly match your payment to your account."
     }
   ]
   

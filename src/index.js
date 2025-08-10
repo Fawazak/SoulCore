@@ -4,11 +4,14 @@ import './index.css';
 import App from './App';
 import {BrowserRouter} from 'react-router-dom'
 import 'react-phone-input-2/lib/style.css';
+import { AuthProvider } from "./components/AuthContext"; // adjust path
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
+  <AuthProvider>
     <App />
+    </AuthProvider>
   </BrowserRouter>
 );
 

@@ -5,6 +5,7 @@ import { auth } from "../firebase/firebase";
 import { updateEmail } from 'firebase/auth';
 import { updatePassword } from 'firebase/auth';
 import Transitions from "../components/Transitions";
+import { toast } from 'sonner';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -38,18 +39,18 @@ const LoginPage = () => {
   // Forgot Password Function
   const handleForgotPassword = async () => {
     if (!email) {
-      setResetMessage("Please enter your email to reset password.");
-      setTimeout(() => setResetMessage(''), 3000); // Remove message after 3 seconds
+        toast.error("Please enter your email to reset password.")
+    
       return;
     }
     try {
       await sendPasswordResetEmail(auth, email);
-      setResetMessage("Password reset email sent! Please check your inbox.");
-      setTimeout(() => setResetMessage(''), 3000);
+      toast.success("Password reset email sent! Please check your inbox.")
+    
     } catch (error) {
       console.error(error);
-      setResetMessage("Error sending reset email. Please try again.");
-      setTimeout(() => setResetMessage(''), 3000);
+      toast.error("Error sending reset email. Please try again.")
+   
     }
   };
 
@@ -72,7 +73,11 @@ const LoginPage = () => {
       setUser(currentUser);
     } catch (error) {
       console.error(error.message);
-     
+      if (error.code === "auth/invalid-credential") {
+        toast.error("Incorrect username or password.");
+      } else {
+        toast.error("Signup failed. Please try again.");
+      }
     }
   };
 
@@ -80,12 +85,12 @@ const LoginPage = () => {
     await logout();
     setUser(null);
   };
-
+  
   if (user) {
     // User is logged in → Show welcome message + logout
     return (
         <Transitions>
-      <div className="min-h-screen flex items-center justify-center bg-slate-300 font-serif px-4">
+      <div className="min-h-screen flex items-center justify-center bg-slate-300 font-serif px-4 ">
         <div className="bg-white rounded-xl shadow-lg p-10 max-w-md w-full text-center">
           <h1 className="text-4xl font-bold mb-4 text-denim font-final">Welcome to SoulCore!</h1>
           <p className="text-xl mb-6">{user.email}</p>
@@ -104,7 +109,7 @@ const LoginPage = () => {
   // If not logged in → Show Login Form
   return (
     <Transitions>
-    <div className="min-h-screen flex items-center justify-center bg-slate-300 font-serif px-4">
+    <div className="min-h-screen flex items-center justify-center bg-slate-300 font-serif px-4 pt-20">
       <div className="bg-white rounded-xl shadow-lg p-10 max-w-md w-full">
         <h1 className="text-4xl font-bold mb-8 text-denim text-center font-final">
           Login

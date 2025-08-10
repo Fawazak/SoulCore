@@ -24,8 +24,8 @@ const WhoAmI = () => {
   {/* Text overlapping right side */}
   <div className="relative md:-ml-20 z-8 mt-6 md:mt-0 md:w-1/2 bg-white/70 backdrop-blur p-6 rounded-lg shadow-md text-center md:text-left" data-aos="fade-up" data-aos-offset="300"
      data-aos-easing="ease-in-sine">
-    <h2 className="text-3xl md:text-5xl mb-4 font-final ">Who Am I?</h2>
-    <p className="text-base md:text-lg mb-4 font-sans">
+    <h2 className="text-3xl md:text-4xl mb-4 font-final ">Who Am I?</h2>
+    <p className="text-base md:text-md mb-4 font-sans">
     Sama is a certified Mat and Reformer Pilates instructor, trained in Sydney, Australia.
 Through SoulCore, she brings her passion for mindfulness and strength‑building movement to people everywhere, helping each client feel stronger in their body, calmer in their mind, and empowered in their daily life.
 

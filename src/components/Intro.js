@@ -8,10 +8,6 @@ const Intro = () => {
   return (
     <header className="relative ">
     <img
-      // autoPlay
-      // muted
-      // loop
-      // id="myVideo"
       className="video-header"
       src={bh}
     >

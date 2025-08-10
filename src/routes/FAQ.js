@@ -1,5 +1,4 @@
 import React from 'react'
-import marble from '../assets/marble.jpg'
 import Transitions from '../components/Transitions'
 
 const FAQ = () => {
@@ -7,7 +6,6 @@ const FAQ = () => {
     <Transitions>
     <div
       className="bg-cover bg-center min-h-screen p-10"
-      style={{ backgroundImage: `url(${marble})` }}
     >
       <div className=" font-serif max-w-8xl mx-auto bg-white bg-opacity-50 p-8 rounded-lg shadow-lg">
         <h1 className="text-5xl  text-forest mb-12">FAQs</h1>

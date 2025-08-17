@@ -75,7 +75,7 @@ const Footer = ({ openModal }) => {
               </li>
               <li>
                 <button
-                  onClick={() => openModal('waiver')}
+                  onClick={() => openModal('footer waiver')}
                   className="hover:underline text-left"
                 >
                   Participant Waiver

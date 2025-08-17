@@ -17,7 +17,7 @@ const GetInContact = () => {
 
 </p>
 <a
-  href="mailto:samaalkhreisha@gmail.com?subject=Inquiry%20from%20Website&body=Hello,%20I%20am%20interested%20in%20learning%20more%20about..."
+  href="mailto:sama.alkhreisha14@gmail.com?subject=Inquiry%20from%20Website&body=Hello,%20I%20am%20interested%20in%20learning%20more%20about..."
   className="btn"
 >Email me</a>
 </div>

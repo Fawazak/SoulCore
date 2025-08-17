@@ -33,7 +33,7 @@ const Services = () => {
             className="text-3xl md:text-5xl font-final mb-16 py-16 px-6 md:pt-40 bg-cover bg-center w-full text-center relative z-5 text-neutral-200"
             style={{ backgroundImage: `url(${photo})` }}
           >
-            Pricing
+            Packages
           </h1>
 
 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-7xl px-6 md:px-10 items-stretch">
@@ -130,12 +130,12 @@ const Services = () => {
 
     {/* Button */}
     <div className="mt-auto flex justify-center">
-      <button 
-        onClick={() => handleSelectPackage("Private")} 
+      <a 
+        href="mailto:samaalkhreisha@gmail.com" 
         className="hover:bg-slate-600 bg-denim text-white transition duration-300 font-semibold py-2 rounded-md w-8/12"
       >
-        JOIN NOW
-      </button>
+        EMAIL NOW
+      </a>
     </div>
   </div>
 </div>

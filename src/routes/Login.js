@@ -6,6 +6,7 @@ import { updateEmail } from 'firebase/auth';
 import { updatePassword } from 'firebase/auth';
 import Transitions from "../components/Transitions";
 import { toast } from 'sonner';
+import Account from './Account';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -13,28 +14,6 @@ const LoginPage = () => {
   const [user, setUser] = useState(null);
   const [resetMessage, setResetMessage] = useState('');
     
-  // Change Password or Email Functions
-  const handleChangePassword = async (newPassword) => {
-    try {
-      const user = auth.currentUser;
-      
-      await updatePassword(user, newPassword);
-      alert("Password updated successfully.");
-    } catch (error) {
-      console.error(error);
-      alert("Failed to update password. You may need to re-login.");
-    }
-  };
-  const handleChangeEmail = async (newEmail) => {
-    try {
-      const user = auth.currentUser;
-      await updateEmail(user, newEmail);
-      alert("Email updated successfully.");
-    } catch (error) {
-      console.error(error);
-      alert("Failed to update email. You may need to re-login.");
-    }
-  };
 
   // Forgot Password Function
   const handleForgotPassword = async () => {
@@ -71,6 +50,8 @@ const LoginPage = () => {
       
       const currentUser = await getCurrentUser();
       setUser(currentUser);
+      setEmail("")
+      setPassword("")
     } catch (error) {
       console.error(error.message);
       if (error.code === "auth/invalid-credential") {
@@ -88,22 +69,8 @@ const LoginPage = () => {
   
   if (user) {
     // User is logged in → Show welcome message + logout
-    return (
-        <Transitions>
-      <div className="min-h-screen flex items-center justify-center bg-slate-300 font-serif px-4 ">
-        <div className="bg-white rounded-xl shadow-lg p-10 max-w-md w-full text-center">
-          <h1 className="text-4xl font-bold mb-4 text-denim font-final">Welcome to SoulCore!</h1>
-          <p className="text-xl mb-6">{user.email}</p>
-          <button
-            onClick={handleLogout}
-            className="btn bg-denim text-white font-bold py-3 rounded-full hover:bg-indigo-700 transition"
-          >
-            Log Out
-          </button>
-        </div>
-      </div>
-      </Transitions>
-    );
+    return <Account user={user} handleLogout={handleLogout} />;
+    
   }
 
   // If not logged in → Show Login Form

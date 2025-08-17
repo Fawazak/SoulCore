@@ -6,6 +6,7 @@ import { signup } from "../services/authServices";
 import PhoneInput from 'react-phone-input-2';
 import { toast } from 'sonner';
 import { useLocation } from "react-router-dom";
+import emailjs from "emailjs-com";
 
 const SignUp = ({ openModal }) => {
   const [email, setEmail] = useState("");
@@ -68,8 +69,19 @@ const SignUp = ({ openModal }) => {
       return;
     }
     try {
-      await signup(email, password, (fname + " " + lname));
-      showFeedback("Signed up successfully!", "success");
+      await signup(email, password, (fname + " " + lname), phone, selectedPackage);
+      // await emailjs.send(
+      //   "service_84nzjon",   // from EmailJS dashboard
+      //   "template_v9yapw9",  // from EmailJS dashboard
+      //   {
+      //     name: `${fname} ${lname}`,
+      //     email: email,
+      //     phone: phone,
+      //     package: selectedPackage
+      //   },
+      //   "TgJs47GuBZQitXmTo"    // from EmailJS dashboard
+      // );
+      toast.success("Signed up successfully!");
       // navigate to homepage or dashboard
     } catch (error) {
       console.error(error.message);
@@ -214,7 +226,6 @@ As a member, you'll gain unlimited access to our growing on-demand library, a va
         <option value="" className="">Select a Package</option>
         <option value="Basic Plan">On-Demand Library Only - AED 65/mo</option>
         <option value="Monthly">Monthly Membership - AED 180/mo</option>
-        <option value="Private">Private Session - AED 280/session</option>
       </select>
     {confirmEmail && !emailMatch && (
       <p className="text-sm text-red-600 mt-1">

@@ -17,6 +17,8 @@ import { Toaster } from 'sonner';
 import WaiverModal from './components/Waivers/Waiver';
 import TermsModal from './components/Waivers/Terms';
 import CancellationModal from './components/Waivers/Cancellation';
+import FooterWaiver from "./components/Waivers/FooterWaiver";
+import Classes from "./routes/Classes";
 function App() {
   const [openModal, setOpenModal] = useState(null); // null or 'waiver', 'privacy', 'cancellation'
 
@@ -36,6 +38,7 @@ function App() {
         <Route path="/signup" element= {<GuestRoute> <SignUp openModal={openModalByName} /> </GuestRoute>} />
         <Route path="/faqs" element= {<FAQ />} />
         <Route path="/login" element= {<Login />} />
+        <Route path="/classes" element= {<ProtectedRoute><Classes /></ProtectedRoute>} />
         <Route
           path="/library"
           element={
@@ -51,6 +54,7 @@ function App() {
       {openModal === 'waiver' && <WaiverModal onClose={closeModal} />}
       {openModal === 'terms' && <TermsModal onClose={closeModal} />}
       {openModal === 'cancellation' && <CancellationModal onClose={closeModal} />}
+      {openModal === 'footer waiver' && <FooterWaiver onClose={closeModal} />}
     </div>
   );
 }

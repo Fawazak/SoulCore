@@ -17,11 +17,11 @@
 
     },
     {
-      "question": "How do I book a private group session/event",
-      "answer": "Reach out via email to schedule a session tailored to you."
+      "question": "How do I book a private group session/event?",
+      "answer": "Reach out via <a href=\"mailto:your-email@example.com\" class=\"text-blue-600 underline\">email</a> to schedule a session tailored to you."
     },
     {
-      "question": "I’ve signed up—what’s next?",
+      "question": "I’ve signed up, what’s next?",
       "answer": "You’ll receive a confirmation email with your login info or live class links. Be sure to check your spam folder, and contact us if you don’t get it."
     },{
         "question": "How long until my membership activates after payment?",

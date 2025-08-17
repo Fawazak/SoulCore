@@ -42,7 +42,7 @@ const Service = () => {
      data-aos-offset="300"
      data-aos-easing="ease-in-sine" 
      onClick={() => navigate("/services")}>
-      Live Mat Pilates
+      Online Mat Pilates
       <TbLivePhoto className="absolute text-[6rem] opacity-20 group-hover:opacity-0 transition duration-300"/>
 
       <div className="absolute inset-0 bg-black bg-opacity-70 text-white text-md flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300 p-4 text-center">

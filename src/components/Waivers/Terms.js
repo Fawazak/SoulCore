@@ -13,7 +13,7 @@ const TermsModal = ({ onClose }) => (
   <h3 className="text-lg font-semibold mb-2">1. Access & Membership</h3>
   <ul className="list-disc ml-6 mb-4 space-y-2">
     <li>Your membership grants you access to live online classes, on-demand video content, and other member features as outlined in your chosen plan.</li>
-    <li>Access is for <strong>your personal use only</strong> and may not be shared or transferred.</li>
+    <li>Access of your account is for <strong>your personal use only</strong> and may not be shared or transferred.</li>
   </ul>
 
   <h3 className="text-lg font-semibold mb-2">2. Payments & Renewals</h3>
@@ -50,7 +50,7 @@ const TermsModal = ({ onClose }) => (
 </div>
         <button
           onClick={onClose}
-          className="mt-4 px-4 py-2 bg-denim text-white rounded-md hover:bg-blue-700"
+          className="mt-4 px-4 py-2 bg-denim text-white rounded-md hover:bg-blue-500"
         >
           Close
         </button>

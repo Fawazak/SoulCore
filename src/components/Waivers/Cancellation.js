@@ -9,7 +9,7 @@ const CancellationModal = ({ onClose }) => (
 
   <h3 className="text-lg font-semibold mb-2">Cancellations & Refunds</h3>
   <ul className="list-disc ml-6 mb-4 space-y-2">
-    <li>You may cancel your membership at any time through your <strong>account dashboard</strong> or by contacting us.</li>
+    <li>You may cancel your membership at any time through your account dashboard or by contacting us.</li>
     <li><strong>No refunds</strong> are issued for partial months or unused sessions.</li>
     <li>New members may be eligible for a <strong>7-day free trial</strong>, after which the paid subscription will begin unless cancelled.</li>
   </ul>

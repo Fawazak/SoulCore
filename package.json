@@ -5,10 +5,12 @@
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@radix-ui/react-dialog": "^1.1.14",
+    "@shadcn/ui": "^0.0.4",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "aos": "^2.3.4",
+    "emailjs-com": "^3.2.0",
     "firebaseui": "^6.1.0",
     "framer-motion": "^11.5.4",
     "intl-tel-input": "^25.3.1",

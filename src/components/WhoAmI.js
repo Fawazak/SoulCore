@@ -22,8 +22,8 @@ const WhoAmI = () => {
   </div>
 
   {/* Text overlapping right side */}
-  <div className="relative md:-ml-20 z-8 mt-6 md:mt-0 md:w-1/2 bg-white/70 backdrop-blur p-6 rounded-lg shadow-md text-center md:text-left" data-aos="fade-up" data-aos-offset="300"
-     data-aos-easing="ease-in-sine">
+  <div className="relative md:-ml-20 z-8 mt-6 md:mt-0 md:w-1/2 bg-white/70 backdrop-blur p-6 rounded-lg shadow-md text-center md:text-left" 
+     >
     <h2 className="text-3xl md:text-4xl mb-4 font-final ">Who Am I?</h2>
     <p className="text-base md:text-md mb-4 font-sans">
     Sama is a certified Mat and Reformer Pilates instructor, trained in Sydney, Australia.

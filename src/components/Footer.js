@@ -31,7 +31,7 @@ const Footer = ({ openModal }) => {
                 </li>
               )}
               <li>
-                <a href="mailto:samaalkhreisha@gmail.com" className="hover:underline">
+                <a href="mailto:soulcore.online@gmail.com" className="hover:underline">
                   Email
                 </a>
               </li>

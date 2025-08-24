@@ -24,6 +24,19 @@ const Services = () => {
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
+  const renderAnswer = (answer) => {
+    return answer.split("via email").map((part, i, arr) => (
+      <span key={i}>
+        {part}
+        {i < arr.length - 1 && (
+          <a href="mailto:soulcore.online@gmail.com" >
+            <span>via</span> <span className="hover:text-blue-600 underline">email</span>
+          </a>
+          
+        )}
+      </span>
+    ));
+  };
 
   return (
     <Transitions>
@@ -77,10 +90,10 @@ const Services = () => {
         Monthly Membership
       </h2>
       <p className="text-3xl font-bold">
-        AED 180<span className="text-base font-normal">/mo</span>
+        AED 150<span className="text-base font-normal">/mo</span>
       </p>
       <h3 className="italic text-xs text-gray-300 p-2">
-        Opening offer: AED 150/month
+        Opening offer: AED 130/month
       </h3>
     </div>
 
@@ -91,7 +104,7 @@ const Services = () => {
       <li>Unlimited access to on-demand library</li>
       <li>Discount to in-person community events/classes</li>
       <li className="text-xs italic text-left text-white pt-6">
-        * 7-day free trial. Cancel anytime. Membership auto-renews after trial unless cancelled.
+        * 7-day free trial. Cancel anytime. Membership is activated after trial unless cancelled.
       </li>
     </ul>
 
@@ -114,7 +127,7 @@ const Services = () => {
         Private Sessions
       </h2>
       <p className="text-3xl font-bold">
-        AED 280<span className="text-base font-normal">/session</span>
+        <span className="text-base font-normal">Contact us for tailored pricing</span>
       </p>
     </div>
 
@@ -123,15 +136,15 @@ const Services = () => {
       <li>Online 1:1 session (50 min)</li>
       <li>Sessions tailored to meet your individual fitness goals</li>
       <li>
-        Duet/Group/Event sessions: Custom quote 
-        <br></br><a href="mailto:samaalkhreisha@gmail.com" className="hover:underline font-bold"> Get in touch</a>
+        Single/Duet/Group/Event sessions: Custom quote 
+        <br></br><a href="mailto:soulcore.online@gmail.com" className="hover:underline font-bold"> Get in touch</a>
       </li>
     </ul>
 
     {/* Button */}
     <div className="mt-auto flex justify-center">
       <a 
-        href="mailto:samaalkhreisha@gmail.com" 
+        href="mailto:soulcore.online@gmail.com" 
         className="hover:bg-slate-600 bg-denim text-white transition duration-300 font-semibold py-2 rounded-md w-8/12"
       >
         EMAIL NOW
@@ -178,7 +191,7 @@ const Services = () => {
                     }`}
                   >
                     <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-                      {faq.answer}
+                    {renderAnswer(faq.answer)}
                     </p>
                   </div>
                 </div>

@@ -1,20 +1,24 @@
 // authService.js
 import { createUserWithEmailAndPassword, signOut, signInWithEmailAndPassword, onAuthStateChanged, updateProfile } from "firebase/auth";
-import { auth } from "../firebase/firebase"; // path to your firebase.js config
+import { doc, setDoc } from "firebase/firestore";
+import { auth, db } from "../firebase/firebase"; // path to your firebase.js config
 
-export const signup =  (email, password, userName) => {
-    const userCredential =  createUserWithEmailAndPassword(auth, email, password);
-    
-    // The user is successfully created and automatically signed in!
+export const signup = async (email, password, userName, phoneNumber, membership) => {
+    const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+  
     const user = userCredential.user;
-
-    // 2. Now, update the user's profile to add their display name
-     updateProfile(user, {
-      displayName: userName // The name you got from your form input
+  
+    await updateProfile(user, {
+      displayName: userName
     });
-  return userCredential;
-
-};
+    await setDoc(doc(db, "users", user.uid), {
+        name: userName,
+        phone: phoneNumber,
+        membership: membership
+      });
+  
+    return user;
+  };
 export const logout = () => {
     return signOut(auth);
   };

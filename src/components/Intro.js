@@ -8,10 +8,6 @@ const Intro = () => {
   return (
     <header className="relative ">
     <img
-      // autoPlay
-      // muted
-      // loop
-      // id="myVideo"
       className="video-header"
       src={bh}
     >
@@ -25,7 +21,7 @@ const Intro = () => {
       </h1>
   
       <div className="flex justify-center w-full">
-        <a href="/about" className="btn ">
+        <a href="/services" className="btn ">
           Learn More
         </a>
       </div>

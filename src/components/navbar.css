@@ -8,102 +8,143 @@
     justify-content: center;
     position: fixed;
     top: 0;
-    padding-bottom: 10px;
-    /* border-radius: 40px; */
+    padding: 10px 1rem; /* top-bottom 10px, left-right 1rem for some horizontal breathing */
     font-weight: bold;
-    z-index: 10;
+    z-index: 20;
     text-align: center;
     transition: 0.5s;
     background-color: rgba(244, 244, 244, 0);
     backdrop-filter: none;
-}
-.navbar:hover {
-    
-    background-color: rgb(71, 134, 189);
-    
-}
-
-.navbar.scrolled {
-    background-color: rgb(71, 134, 189); /* Or your preferred color */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    
+    padding-top: 1rem;    /* or more */
+    padding-bottom: 1rem;
   }
-
-.logo2 {
-    padding-top: 10px;
-    width: 160px;
-    height: 100px;
-}
-
-.menu {
+  
+  /* On hover and scrolled states stay same */
+  .navbar:hover {
+    background-color: rgb(71, 134, 189);
+  }
+  .navbar.scrolled {
+    background-color: rgb(71, 134, 189);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo2 {
+    padding-top: 1px;
+    width: 150px;  /* reduced width for better scaling */
+    height: auto;  /* let height scale with width */
+    max-height: 80px;
+    object-fit: contain;
+    transition: width 0.3s ease;
+  }
+  
+  .menu {
     display: flex;
-    flex-direction: row; /* Keep items side-by-side horizontally */
-    justify-content: center;
-    flex-wrap: wrap; /* So it wraps on smaller screens */
+    flex-direction: row;
+    justify-content: space-evenly; /* space items across full width */
+    flex-wrap: wrap;
     align-items: center;
-    gap: 8rem;
-}
-.user-icon-link:hover .user-icon {
-    color: rgb(223, 239, 255);
-    transform: scale(1.1);
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-/* Base Icon Style */
-.user-icon {
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-.item {
-    font-size: 25px;
-    font-weight: 100;
-    font-family: "Playfair Display";
+    gap: 2rem;  
+    width: 100%;
+    max-width: none; /* remove width limit */
+    box-sizing: border-box;
+  }
+  
+  .item {
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-family: "Playfair Display", serif;
     transition: 0.4s;
     cursor: pointer;
-    width: 160px;
-}
-.user-icon-container {
-    position: absolute;
-    right: 5rem; /* Adjust distance from right edge */
-    top: 50%;
-    padding: 20px;
-    transform: translateY(-50%);
-    cursor: pointer;
-    /* background-color: rgb(94, 157, 201); */
-    border-radius: 100%;
-}
-
-.user-icon {
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.user-icon-container:hover .user-icon {
-    color: rgb(223, 239, 255);
-    transform: scale(1.1);
-}
-.item:hover {
+    padding: 0.5rem 1rem;
+    width: auto; /* let text decide size */
+    white-space: nowrap;
+    text-align: center;
+  }
+  
+  
+  .item:hover {
     color: rgb(223, 239, 255);
     padding-bottom: 0.5rem;
     border-bottom: 3px solid rgb(189, 207, 225);
-    /* color: rgb(194, 149, 94); */
-    
-}
-
-/* .navbar:hover {
-    background-color: rgba(26, 67, 20, 0);
-} */
-
-.mobMenu {
+  }
+  
+  .user-icon-container {
+    position: absolute;
+    right: 2rem; /* slight reduction */
+    top: 50%;
+    padding: 12px; /* reduced padding */
+    transform: translateY(-50%);
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+  
+  .user-icon-link:hover .user-icon,
+  .user-icon-container:hover .user-icon {
+    color: rgb(223, 239, 255);
+    transform: scale(1.1);
+  }
+  
+  .user-icon {
+    transition: color 0.3s ease, transform 0.3s ease;
+    font-size: 1.5rem; /* scalable */
+  }
+  
+  /* Mobile menu toggle button */
+  .mobMenu {
     display: none;
     height: 40px;
     margin-right: 8px;
-}
-
-/* Responsive changes */
-@media screen and (max-width: 720px) {
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+  }
+  
+  /* Responsive changes */
+  
+  /* Tablets and smaller laptops */
+  @media screen and (max-width: 1024px) {
+    .menu {
+      gap: 2rem;
+      max-width: 700px;
+    }
+    .logo2 {
+      width: 100px;
+      max-height: 70px;
+    }
+    .user-icon {
+      font-size: 1.3rem;
+    }
+  }
+  
+  /* Small screens (phones) */
+  @media screen and (max-width: 720px) {
     .mobMenu {
-        display: flex;
+      display: flex;
     }
     .menu {
-        display: none;
+      display: none;
     }
-}
+    .navbar {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 10px 1rem;
+    }
+    .logo2 {
+      width: 90px;
+      max-height: 60px;
+    }
+    .user-icon-container {
+      position: relative;
+      right: auto;
+      top: auto;
+      padding: 8px;
+      transform: none;
+    }
+    .item {
+      font-size: 1rem;
+      padding: 0.4rem 0.6rem;
+    }
+  }
+  
